@@ -36,7 +36,7 @@ def main():
         model = MultiOutputClusterModel()
         
         # Load data
-        data_path = "/content/drive/MyDrive/cluster_performance_ml/data/raw/cluster_data.csv"
+        data_path = "data/raw/cluster_data.csv"
         if not os.path.exists(data_path):
             logger.error(f"Data file not found: {data_path}")
             logger.info("Please place your CSV data file at data/raw/cluster_data.csv")
