@@ -18,7 +18,7 @@ class ClusterDataPreprocessor:
     Handles feature engineering, encoding, and data splitting.
     """
     
-    def __init__(self, config_path: str = "/content/drive/MyDrive/cluster_performance_ml/configs/config.yaml"):
+    def __init__(self, config_path: str = "configs/config.yaml"):
         """Initialize the preprocessor with configuration."""
         self.config = self._load_config(config_path)
         self.label_encoders = {}
@@ -75,14 +75,13 @@ class ClusterDataPreprocessor:
             'clusterType', 'controlPlaneArch', 'infraNodesCount', 'infraNodesType',
             'ipsecMode', 'jobConfig.', 'k8sVersion', 'masterNodesCount', 'masterNodesType',
             'ocpMajorVersion', 'ocpVersion', 'passed', 'platform', 'publish', 'region',
-            'sdnType', 'totalNodes', 'workerArch', 'workerNodesCount', 'workerNodesType'
+            'sdnType', 'totalNodes', 'workerArch', 'workerNodesCount', 'workerNodesType',
+            'masterNodevCPU', 'workerNodevCPU', 'masterNodeMemory',
+            'workerNodeMemory'
         ])
         
         metric_patterns = self.config.get('features', {}).get('metric_patterns', [
-            'alert', 'avg-ro-apicalls-latency', 'max-ro-apicalls-latency',
-            'avg-mutating-apicalls-latency', 'max-mutating-apicalls-latency',
-            'cpu-', 'max-cpu-', 'memory-', 'max-memory-', '99th', 'max-99th',
-            'cgroupCPU', 'cgroupMemory', 'nodeCPU'
+            'cpu-', 'max-cpu-', 'memory-', 'max-memory-', 'podLatency'
         ])
         
         # Identify feature columns

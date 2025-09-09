@@ -16,142 +16,59 @@ features:
   # Metadata features (inputs) - these will be auto-detected
   metadata_patterns:
     - clusterType
+    - cluster_health_score
     - controlPlaneArch
-    - elapsedTime
+    - infraNodeMemory
     - infraNodesCount
     - infraNodesType
+    - infraNodevCPU
     - ipsecMode
+    - jobConfig.burst
+    - jobConfig.churnDelay
+    - jobConfig.churnDeletionStrategy
+    - jobConfig.churnDuration
+    - jobConfig.churnPercent
+    - jobConfig.cleanup
+    - jobConfig.iterationsPerNamespace
+    - jobConfig.jobIterations
+    - jobConfig.jobType
+    - jobConfig.maxWaitTimeout
+    - jobConfig.metricsClosing
+    - jobConfig.name
+    - jobConfig.preLoadPeriod
+    - jobConfig.qps
+    - jobConfig.verifyObjects
+    - jobConfig.waitForDeletion
+    - jobConfig.waitWhenFinished
     - k8sVersion
+    - masterNodeMemory
     - masterNodesCount
     - masterNodesType
+    - masterNodevCPU
+    - metricName
     - ocpMajorVersion
     - ocpVersion
     - passed
     - platform
+    - podLatencyQuantilesMeasurement_Ready_P99
     - publish
     - region
     - sdnType
     - totalNodes
     - workerArch
+    - workerNodeMemory
     - workerNodesCount
     - workerNodesType
-    - jobConfig.burst
-    - jobConfig.jobIterations
-    - jobConfig.qps
-    - jobConfig.waitForDeletion
-    - jobConfig.waitWhenFinished
-    - jobConfig.verifyObjects
-    - jobConfig.churnCycles
-    - jobConfig.churnDelay
-    - jobConfig.churnDeletionStrategy
-    - jobConfig.churnDuration
-    - jobConfig.churnPercent
-    - jobConfig.iterationsPerNamespace
-    - jobConfig.jobType
-    - jobConfig.preLoadPeriod
+    - workerNodevCPU
 
   # Target metrics (outputs) - these will be auto-detected
   metric_patterns:
-    - alert
-    - avg-ro-apicalls-latency
-    - max-ro-apicalls-latency
-    - avg-mutating-apicalls-latency
-    - max-mutating-apicalls-latency
-    - cpu-kubelet
-    - max-cpu-kubelet
-    - memory-kubelet
-    - max-memory-kubelet
-    - max-memory-sum-kubelet
-    - cpu-crio
-    - max-cpu-crio
-    - memory-crio
-    - max-memory-crio
-    - max-memory-sum-crio
-    - 99thEtcdDiskBackendCommit
-    - max-99thEtcdDiskBackendCommit
-    - 99thEtcdDiskWalFsync
-    - max-99thEtcdDiskWalFsync
-    - 99thEtcdRoundTripTime
-    - max-99thEtcdRoundTripTime
-    - max-99thEtcdCompaction
-    - 99thEtcdCompaction-raw
-    - max-99thEtcdDefrag
-    - 99thEtcdDefrag-raw
-    - cpu-kube-controller-manager
-    - max-cpu-kube-controller-manager
-    - memory-kube-controller-manager
-    - max-memory-kube-controller-manager
-    - max-memory-sum-kube-controller-manager
     - cpu-kube-apiserver
-    - max-cpu-kube-apiserver
-    - memory-kube-apiserver
-    - max-memory-kube-apiserver
-    - max-memory-sum-kube-apiserver
-    - cpu-openshift-apiserver
-    - max-cpu-openshift-apiserver
-    - memory-openshift-apiserver
-    - max-memory-openshift-apiserver
-    - max-memory-sum-openshift-apiserver
-    - cpu-etcd
-    - max-cpu-etcd
-    - memory-etcd
-    - max-memory-etcd
-    - max-memory-sum-etcd
-    - cpu-openshift-controller-manager
-    - max-cpu-openshift-controller-manager
-    - memory-openshift-controller-manager
-    - max-memory-openshift-controller-manager
-    - cpu-multus
-    - max-cpu-multus
-    - memory-multus
-    - max-memory-multus
-    - cpu-ovn-control-plane
-    - max-cpu-ovn-control-plane
-    - memory-ovn-control-plane
-    - max-memory-ovn-control-plane
-    - cpu-ovnkube-node
-    - max-cpu-ovnkube-node
-    - memory-ovnkube-node
-    - max-memory-ovnkube-node
     - cpu-masters
-    - max-cpu-masters
-    - memory-masters
-    - max-memory-masters
-    - max-memory-sum-masters
     - cpu-workers
-    - max-cpu-workers
-    - memory-workers
-    - max-memory-workers
+    - max-memory-sum-kube-apiserver
+    - max-memory-sum-masters
     - max-memory-sum-workers
-    - memory-sum-workers
-    - cpu-infra
-    - max-cpu-infra
-    - memory-infra
-    - max-memory-infra
-    - max-memory-sum-infra
-    - cpu-prometheus
-    - max-cpu-prometheus
-    - memory-prometheus
-    - max-memory-prometheus
-    - cpu-router
-    - max-cpu-router
-    - memory-router
-    - max-memory-router
-    - memory-cluster-usage-ratio
-    - max-memory-cluster-usage-ratio
-    - cpu-cluster-usage-ratio
-    - max-cpu-cluster-usage-ratio
-    - nodeCPUSeconds-Workers
-    - nodeCPUSeconds-Masters
-    - nodeCPUSeconds-Infra
-    - cgroupCPUSeconds-Workers
-    - cgroupMemoryRSS-Workers
-    - cgroupCPUSeconds-Masters
-    - cgroupMemoryRSS-Masters
-    - cgroupCPUSeconds-Infra
-    - cgroupMemoryRSS-Infra
-    - cgroupCPUSeconds-namespaces
-    - cgroupMemoryRSS-namespaces
 
 # Models to train
 models:

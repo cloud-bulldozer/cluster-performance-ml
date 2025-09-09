@@ -28,7 +28,7 @@ class MultiOutputClusterModel:
     Supports various algorithms including Random Forest, XGBoost, and LightGBM.
     """
     
-    def __init__(self, config_path: str = "/content/drive/MyDrive/cluster_performance_ml/configs/config.yaml"):
+    def __init__(self, config_path: str = "configs/config.yaml"):
         """Initialize the model with configuration."""
         self.config = self._load_config(config_path)
         self.models = {}
