@@ -1,958 +1,439 @@
 feature_columns:
 - clusterType
+- cluster_health_score
 - controlPlaneArch
+- infraNodeMemory
 - infraNodesCount
 - infraNodesType
+- infraNodevCPU
 - ipsecMode
 - jobConfig.burst
 - jobConfig.churnDelay
 - jobConfig.churnDeletionStrategy
 - jobConfig.churnDuration
 - jobConfig.churnPercent
+- jobConfig.cleanup
 - jobConfig.iterationsPerNamespace
 - jobConfig.jobIterations
 - jobConfig.jobType
+- jobConfig.maxWaitTimeout
+- jobConfig.metricsClosing
+- jobConfig.name
 - jobConfig.preLoadPeriod
 - jobConfig.qps
 - jobConfig.verifyObjects
 - jobConfig.waitForDeletion
 - jobConfig.waitWhenFinished
 - k8sVersion
+- masterNodeMemory
 - masterNodesCount
 - masterNodesType
+- masterNodevCPU
+- metricName
 - ocpMajorVersion
 - ocpVersion
 - passed
 - platform
+- podLatencyQuantilesMeasurement_Ready_P99
 - publish
 - region
 - sdnType
 - totalNodes
 - workerArch
+- workerNodeMemory
 - workerNodesCount
 - workerNodesType
+- workerNodevCPU
 model_scores:
+  CatBoost:
+    cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - &id001 !!python/object/apply:numpy.dtype
+      args:
+      - f8
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 0
+    - !!binary |
+      ieFFSZLSwz8=
+    cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      TmMLEb+utD8=
+    cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      sdEFwEcv7T8=
+    cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      rCMq9scbyD8=
+    cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      UWNZHrwtuD8=
+    cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      TXQ/3y7e7D8=
+    cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      2T8lrVCvzT8=
+    cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      xqFdbwqTvT8=
+    cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ugy51AlP7D8=
+    max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      RKtQJh62vz8=
+    max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Trk4Xq/Wqz8=
+    max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      sOEesR7J7T8=
+    max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      w49cRccswz8=
+    max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      IUTedvQTsD8=
+    max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      rC66oa227T8=
+    max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      3l5AgqwprT8=
+    max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      /EmtSCbImj8=
+    max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      jUkEo2z+7j8=
+    overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      8whWnPN57T8=
+    overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      BwtHZqdSwz8=
+    overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      nWTR43mFsj8=
+    overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      xZykkcl57T8=
+    overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ItWWp+820T8=
   LightGBM:
-    avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_mae: 0.15019431847199685
-    avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_mse: 0.022558333301267608
-    avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_r2: -1.1712956313395339e+32
-    avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mae: 0.15233952156305666
-    avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mse: 0.023207329830061
-    avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_r2: -1.2049934577160733e+32
-    cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_mae: 0.017586845192190517
-    cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_mse: 0.00030929712381407476
-    cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_r2: -1.027815989973554e+32
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_mae: 0.038833859814065334
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_mse: 0.0015080686680584783
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_r2: -1.2528544332183742e+32
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_ocm_agent_operator_mae: 0.06811854246339538
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_ocm_agent_operator_mse: 0.004640135827337401
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_ocm_agent_operator_r2: -9.637185071783556e+31
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_mae: 0.15327983587600502
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_mse: 0.02349470808617504
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_r2: -1.2199149898803947e+32
-    max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_mae: 0.1540230666728872
-    max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_mse: 0.023723105067320647
-    max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_r2: -1.2317740391574065e+32
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_ingressclasses_mae: 0.1373964455369953
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_ingressclasses_mse: 0.018877783246200514
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_ingressclasses_r2: -9.801905464534833e+31
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mae: 0.07150410163283498
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mse: 0.005112836550318796
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_r2: -1.0618946063368931e+32
-    max_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_clusterrolebindings_mae: 0.12576177021284085
-    max_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_clusterrolebindings_mse: 0.015816022847067384
-    max_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_clusterrolebindings_r2: -8.212148574334304e+31
-    overall_explained_variance: 0.11533742331288344
-    overall_mae: 0.4318086959530726
-    overall_mse: 0.4219805417970507
-    overall_r2: -2.8378027400183394e+30
-    overall_rmse: 0.6496002938708162
+    cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      81JIfDxuxT8=
+    cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Y2XNRjcduj8=
+    cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      MqwAhgJy7D8=
+    cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      0rPUIpWrxz8=
+    cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      xCuXAF1Quj8=
+    cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ev+Bel+X7D8=
+    cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      b23GdDpxzD8=
+    cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      b/EbIHtevz8=
+    cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      RPT2x7EV7D8=
+    max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      UUgxt3ZEwD8=
+    max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      CJ2eby7Yrz8=
+    max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      w/OQa4x37T8=
+    max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      psYnH1nNxD8=
+    max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      JVC1w3kvuD8=
+    max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      uGEjyIWP7D8=
+    max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      xTgWa1RLtD8=
+    max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      K8oNTrXtsT8=
+    max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      gsdBAElO7T8=
+    overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      OaGvojq+7D8=
+    overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      l5r2r2sgxD8=
+    overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      59EtSI6jtz8=
+    overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      0/RnfxK+7D8=
+    overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      7eCT+Kty0z8=
   RandomForest:
-    avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_mae: 0.11840475580414513
-    avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_mse: 0.03978353270867596
-    avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_r2: -5.164197797616894e+31
-    avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mae: 0.008092578180785834
-    avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mse: 0.0004584287512849086
-    avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_r2: -2.3802981651586748e+30
-    avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_networkpolicies_mae: 0.005890150893739553
-    avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_networkpolicies_mse: 0.000242857142857146
-    avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_networkpolicies_r2: -3.902563821771884e+56
-    avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_rolebindingrestrictions_mae: 0.005890150893739518
-    avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_rolebindingrestrictions_mse: 0.00024285714285714316
-    avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_rolebindingrestrictions_r2: -1.5610255287087353e+57
-    avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_statefulsets_mae: 0.0058901508937395635
-    avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_statefulsets_mse: 0.00024285714285714684
-    avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_statefulsets_r2: -6.244102114835036e+57
-    cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_managed_node_metadata_operator_mae: 0.006176462623663726
-    cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_managed_node_metadata_operator_mse: 0.00026704083379060304
-    cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_managed_node_metadata_operator_r2: -8.873953807305403e+31
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_managednotifications_mae: 0.008221959128116688
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_managednotifications_mse: 0.00047320428333093566
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_managednotifications_r2: -6.1425427844611044e+29
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_packages_mae: 0.0037554007499783987
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_packages_mse: 9.872124355056386e-05
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_packages_r2: -5.1259000275824436e+29
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_upgradeconfigs_mae: 0.0031276661076738176
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_upgradeconfigs_mse: 6.847606696763833e-05
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_upgradeconfigs_r2: -3.55548067400889e+29
-    max_mutating_apicalls_latency_byLabelVerb_PATCH_byLabelResource_daemonsets_mae: 0.005890150893739497
-    max_mutating_apicalls_latency_byLabelVerb_PATCH_byLabelResource_daemonsets_mse: 0.00024285714285714137
-    max_mutating_apicalls_latency_byLabelVerb_PATCH_byLabelResource_daemonsets_r2: -2.4976408459339581e+58
-    overall_explained_variance: -3.488707360391994e+55
-    overall_mae: 0.27443080863925473
-    overall_mse: 0.3442139588499833
-    overall_r2: -4.070158587123993e+55
-    overall_rmse: 0.586697501997395
+    cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      S08pwDzSvj8=
+    cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      cPQs1jO+rj8=
+    cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      u7zc2Fro7T8=
+    cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      91E99s0Awj8=
+    cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      PI7ibVfEsD8=
+    cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      V4s/lPjT7T8=
+    cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      fYCUlOQ5xD8=
+    cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      TSX1L1T2sD8=
+    cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      vBQ4wAXi7T8=
+    max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      kn/5ztyAtz8=
+    max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      azkdqbPBpT8=
+    max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      dGJUrfdE7j8=
+    max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      8vSV/OSFvz8=
+    max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      IC9Qt4eUrD8=
+    max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      XaIf8sP37T8=
+    max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      8GRxGTw3qD8=
+    max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Yxsk9EUspT8=
+    max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      2xudf7xo7j8=
+    overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Qy5mAQoM7j8=
+    overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      3NlY8qoRvT8=
+    overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      6E8SEQJJrD8=
+    overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      6ZS7jE0L7j8=
+    overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      ASzqBNcVzj8=
   XGBoost:
-    avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_mae: 0.14873414261933565
-    avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_mse: 0.0721236752544887
-    avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_r2: -9.362188311246695e+31
-    avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_mae: 6.323049227360822e-06
-    avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_mse: 3.998095153162829e-11
-    avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_r2: -2.0759296903890677e+23
-    avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mae: 6.2995093875473085e-06
-    avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mse: 3.968381852379666e-11
-    avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_r2: -2.060501662557756e+23
-    cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_mae: 7.728372336084088e-07
-    cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_mse: 5.972773896514982e-13
-    cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_r2: -1.9847945689352682e+23
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_mae: 1.748805875993742e-06
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_mse: 3.0583219919102392e-12
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_r2: -2.540754507357362e+23
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_package_operator_mae: 3.0434591533456956e-05
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_package_operator_mse: 9.262643618083698e-10
-    cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_package_operator_r2: -1.2023598839975914e+24
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_mae: 6.896375019688206e-06
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_mse: 4.75599884121795e-11
-    max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_r2: -2.4694557842451242e+23
-    max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_mae: 6.625731659368195e-06
-    max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_mse: 4.3900320021954e-11
-    max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_r2: -2.2794349373866536e+23
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_dnsrecords_mae: 5.228771854925984e-05
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_dnsrecords_mse: 2.734005511086612e-09
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_dnsrecords_r2: -8.872355141519951e+23
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mae: 3.1429649739039833e-06
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mse: 9.878228827187264e-12
-    max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_r2: -2.0516278602917043e+23
-    overall_explained_variance: -1.1415155025865217e+29
-    overall_mae: 0.29670241475105286
-    overall_mse: 0.434123158454895
-    overall_r2: -398547517440.0
-    overall_rmse: 0.6588802307361293
+    cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      0P/HuXCVvz8=
+    cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      xRB+AwDssD8=
+    cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      KFZYP1Sy7T8=
+    cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      5DTgGF82wz8=
+    cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      FhRDQ9ydsj8=
+    cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      DwyeqKGW7T8=
+    cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      MeV/4NqZyT8=
+    cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      EGEvrJgIuT8=
+    cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      gWPMSyDg7D8=
+    max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      +bGEtyapuD8=
+    max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      JYm33v6/qD8=
+    max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      /WHnkQMI7j8=
+    max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      6YzIJfCivj8=
+    max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Nfezo95Cqz8=
+    max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      gWKfQMYP7j8=
+    max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      Febs4E25pj8=
+    max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      VAPNAbdalz8=
+    max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      0/KuaGMf7z8=
+    overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      jPa5Y3Pl7T8=
+    overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      UKYMv8VPvz8=
+    overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      +ywzfDDOrj8=
+    overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      gb9+kmDl7T8=
+    overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
+    - *id001
+    - !!binary |
+      EJuU8qNlzz8=
 target_columns:
-- 99thEtcdCompaction-raw_byLabelNamespace_openshift-etcd_byLabelEndpoint_etcd-metrics
-- 99thEtcdDefrag-raw_byLabelNamespace_openshift-etcd_byLabelEndpoint_etcd-metrics
-- 99thEtcdDiskBackendCommit
-- 99thEtcdDiskWalFsync
-- 99thEtcdRoundTripTime
-- avg-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_clusterrolebindings
-- avg-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_clusterroles
-- avg-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts
-- avg-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_services
-- avg-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_clusterpackages
-- avg-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_machinehealthchecks
-- avg-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_nodes
-- avg-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_pods
-- avg-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_clusterserviceversions
-- avg-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_configmaps
-- avg-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_events
-- avg-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_pods
-- avg-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_rolebindings
-- avg-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_selfsubjectaccessreviews
-- avg-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_selfsubjectreviews
-- avg-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_serviceaccounts
-- avg-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_subjectaccessreviews
-- avg-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_tokenreviews
-- avg-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_apirequestcounts
-- avg-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusterobjecttemplates
-- avg-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusteroperators
-- avg-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusterpackages
-- avg-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusterserviceversions
-- avg-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_configmaps
-- avg-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_credentialsrequests
-- avg-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_daemonsets
-- avg-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_deployments
-- avg-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_leases
-- avg-ro-apicalls-latency_byLabelVerb_GET__value
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_apirequestcounts
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_apiservers
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_apiservices
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_authentications
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_clusteroperators
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_clusterrolebindings
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_clusterroles
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_configmaps
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_controllerconfigs
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_customresourcedefinitions
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_daemonsets
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_deployments
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_endpoints
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_endpointslices
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_images
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_ingresscontrollers
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_leases
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_machineconfignodes
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_machineconfigpools
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_namespaces
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_nodes
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_olmconfigs
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_olms
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_openshiftapiservers
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_openshiftcontrollermanagers
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_poddisruptionbudgets
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_pods
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_rolebindings
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_roles
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_secrets
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_serviceaccounts
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_servicemonitors
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_services
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_storageclasses
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_upgradeconfigs
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_validatingadmissionpolicies
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_validatingadmissionpolicybindings
-- avg-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_volumesnapshotclasses
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_cronjobs
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_daemonsets
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_deployments
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_horizontalpodautoscalers
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_ingresses
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_installplans
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_jobs
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_limitranges
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_machineconfignodes
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_networkpolicies
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_poddisruptionbudgets
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_podnetworkconnectivitychecks
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_pods
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_replicasets
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_replicationcontrollers
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_rolebindingrestrictions
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_rolebindings
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_roles
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_secrets
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_serviceaccounts
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_services
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_statefulsets
-- avg-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_subscriptions
-- cgroupCPUSeconds-Infra
-- cgroupCPUSeconds-Masters
-- cgroupCPUSeconds-Workers
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-addon-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-apiserver
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-apiserver-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-authentication
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-authentication-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-catalogd
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-cloud-controller-manager
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-cloud-controller-manager-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-cloud-credential-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-cloud-network-config-controller
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-cluster-csi-drivers
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-cluster-machine-approver
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-cluster-node-tuning-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-cluster-olm-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-cluster-samples-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-cluster-storage-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-cluster-version
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-config-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-console
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-console-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-controller-manager
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-controller-manager-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-custom-domains-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-deployment-validation-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-dns
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-dns-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-e2e-loki
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-etcd
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-etcd-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-image-registry
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-ingress
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-ingress-canary
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-ingress-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-insights
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-kube-apiserver
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-kube-apiserver-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-kube-controller-manager
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-kube-controller-manager-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-kube-scheduler
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-kube-scheduler-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-kube-storage-version-migrator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-kube-storage-version-migrator-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-machine-api
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-machine-config-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-managed-node-metadata-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-managed-upgrade-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-marketplace
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-monitoring
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-multus
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-must-gather-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-network-console
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-network-diagnostics
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-network-node-identity
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-network-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-oauth-apiserver
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-ocm-agent-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-operator-controller
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-operator-lifecycle-manager
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-osd-metrics
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-ovn-kubernetes
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-package-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-rbac-permissions
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-route-controller-manager
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-route-monitor-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-security
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-service-ca
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-service-ca-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-splunk-forwarder-operator
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-user-workload-monitoring
-- cgroupCPUSeconds-namespaces_byLabelNamespace_openshift-validation-webhook
-- cgroupMemoryRSS-Infra
-- cgroupMemoryRSS-Masters
-- cgroupMemoryRSS-Workers
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-addon-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-apiserver
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-apiserver-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-authentication
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-authentication-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-catalogd
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-cloud-controller-manager
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-cloud-controller-manager-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-cloud-credential-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-cloud-network-config-controller
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-cluster-csi-drivers
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-cluster-machine-approver
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-cluster-node-tuning-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-cluster-olm-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-cluster-samples-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-cluster-storage-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-cluster-version
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-config-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-console
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-console-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-controller-manager
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-controller-manager-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-custom-domains-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-deployment-validation-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-dns
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-dns-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-e2e-loki
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-etcd
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-etcd-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-image-registry
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-ingress
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-ingress-canary
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-ingress-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-insights
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-kube-apiserver
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-kube-apiserver-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-kube-controller-manager
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-kube-controller-manager-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-kube-scheduler
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-kube-scheduler-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-kube-storage-version-migrator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-kube-storage-version-migrator-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-machine-api
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-machine-config-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-managed-node-metadata-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-managed-upgrade-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-marketplace
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-monitoring
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-multus
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-must-gather-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-network-console
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-network-diagnostics
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-network-node-identity
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-network-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-oauth-apiserver
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-ocm-agent-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-operator-controller
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-operator-lifecycle-manager
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-osd-metrics
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-ovn-kubernetes
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-package-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-rbac-permissions
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-route-controller-manager
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-route-monitor-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-security
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-service-ca
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-service-ca-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-splunk-forwarder-operator
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-user-workload-monitoring
-- cgroupMemoryRSS-namespaces_byLabelNamespace_openshift-validation-webhook
-- cpu-cluster-usage-ratio
-- cpu-crio
-- cpu-etcd
-- cpu-infra
 - cpu-kube-apiserver
-- cpu-kube-controller-manager
-- cpu-kubelet
 - cpu-masters
-- cpu-multus_byLabelContainer_kube-multus
-- cpu-multus_byLabelContainer_kube-multus-additional-cni-plugins
-- cpu-multus_byLabelContainer_kube-rbac-proxy
-- cpu-multus_byLabelContainer_multus-admission-controller
-- cpu-openshift-apiserver
-- cpu-openshift-controller-manager
-- cpu-ovn-control-plane_byLabelContainer_kube-rbac-proxy
-- cpu-ovn-control-plane_byLabelContainer_ovnkube-cluster-manager
-- cpu-ovnkube-node_byLabelContainer_drop-icmp
-- cpu-ovnkube-node_byLabelContainer_kube-rbac-proxy-node
-- cpu-ovnkube-node_byLabelContainer_kube-rbac-proxy-ovn-metrics
-- cpu-ovnkube-node_byLabelContainer_nbdb
-- cpu-ovnkube-node_byLabelContainer_northd
-- cpu-ovnkube-node_byLabelContainer_ovn-acl-logging
-- cpu-ovnkube-node_byLabelContainer_ovn-controller
-- cpu-ovnkube-node_byLabelContainer_ovnkube-controller
-- cpu-ovnkube-node_byLabelContainer_sbdb
-- cpu-prometheus
-- cpu-router
 - cpu-workers
-- max-99thEtcdCompaction
-- max-99thEtcdDefrag
-- max-99thEtcdDiskBackendCommit
-- max-99thEtcdDiskWalFsync
-- max-99thEtcdRoundTripTime
-- max-cpu-cluster-usage-ratio
-- max-cpu-crio
-- max-cpu-etcd
-- max-cpu-infra
-- max-cpu-kube-apiserver
-- max-cpu-kube-controller-manager
-- max-cpu-kubelet
-- max-cpu-masters
-- max-cpu-multus_byLabelContainer_kube-multus
-- max-cpu-multus_byLabelContainer_kube-multus-additional-cni-plugins
-- max-cpu-multus_byLabelContainer_kube-rbac-proxy
-- max-cpu-multus_byLabelContainer_multus-admission-controller
-- max-cpu-openshift-apiserver
-- max-cpu-openshift-controller-manager
-- max-cpu-ovn-control-plane_byLabelContainer_kube-rbac-proxy
-- max-cpu-ovn-control-plane_byLabelContainer_ovnkube-cluster-manager
-- max-cpu-ovnkube-node_byLabelContainer_drop-icmp
-- max-cpu-ovnkube-node_byLabelContainer_kube-rbac-proxy-node
-- max-cpu-ovnkube-node_byLabelContainer_kube-rbac-proxy-ovn-metrics
-- max-cpu-ovnkube-node_byLabelContainer_nbdb
-- max-cpu-ovnkube-node_byLabelContainer_northd
-- max-cpu-ovnkube-node_byLabelContainer_ovn-acl-logging
-- max-cpu-ovnkube-node_byLabelContainer_ovn-controller
-- max-cpu-ovnkube-node_byLabelContainer_ovnkube-controller
-- max-cpu-ovnkube-node_byLabelContainer_sbdb
-- max-cpu-prometheus
-- max-cpu-router
-- max-cpu-workers
-- max-memory-cluster-usage-ratio
-- max-memory-crio
-- max-memory-etcd
-- max-memory-infra
-- max-memory-kube-apiserver
-- max-memory-kube-controller-manager
-- max-memory-kubelet
-- max-memory-masters
-- max-memory-multus_byLabelContainer_kube-multus
-- max-memory-multus_byLabelContainer_kube-multus-additional-cni-plugins
-- max-memory-multus_byLabelContainer_kube-rbac-proxy
-- max-memory-multus_byLabelContainer_multus-admission-controller
-- max-memory-openshift-apiserver
-- max-memory-openshift-controller-manager
-- max-memory-ovn-control-plane_byLabelContainer_kube-rbac-proxy
-- max-memory-ovn-control-plane_byLabelContainer_ovnkube-cluster-manager
-- max-memory-ovnkube-node_byLabelContainer_drop-icmp
-- max-memory-ovnkube-node_byLabelContainer_kube-rbac-proxy-node
-- max-memory-ovnkube-node_byLabelContainer_kube-rbac-proxy-ovn-metrics
-- max-memory-ovnkube-node_byLabelContainer_nbdb
-- max-memory-ovnkube-node_byLabelContainer_northd
-- max-memory-ovnkube-node_byLabelContainer_ovn-acl-logging
-- max-memory-ovnkube-node_byLabelContainer_ovn-controller
-- max-memory-ovnkube-node_byLabelContainer_ovnkube-controller
-- max-memory-ovnkube-node_byLabelContainer_sbdb
-- max-memory-prometheus
-- max-memory-router
-- max-memory-sum-crio
-- max-memory-sum-etcd
-- max-memory-sum-infra
 - max-memory-sum-kube-apiserver
-- max-memory-sum-kube-controller-manager
-- max-memory-sum-kubelet
 - max-memory-sum-masters
-- max-memory-sum-openshift-apiserver
 - max-memory-sum-workers
-- max-memory-workers
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_addoninstances
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_alertingrules
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_alertmanagerconfigs
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_alertmanagers
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_alertrelabelconfigs
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_baremetalhosts
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_bmceventsubscriptions
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_catalogsources
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_certificatesigningrequests
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_clusterrolebindings
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_clusterroles
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_clusterserviceversions
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_clusterurlmonitors
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_configmaps
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_consolenotifications
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_controllerrevisions
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_controlplanemachinesets
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_credentialsrequests
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_cronjobs
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_csistoragecapacities
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_daemonsets
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_dataimages
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_deployments
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_dnsrecords
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_egressfirewalls
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_egressqoses
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_egressrouters
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_egressservices
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_endpoints
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_endpointslices
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_events
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_firmwareschemas
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_gateways
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_grpcroutes
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_hardwaredata
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_horizontalpodautoscalers
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_hostfirmwarecomponents
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_hostfirmwaresettings
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_hostupdatepolicies
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_httproutes
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_ingresscontrollers
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_ingresses
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_installplans
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_ipaddressclaims
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_ipaddresses
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_ipamclaims
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_ippools
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_jobs
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_leases
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_limitranges
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_machineautoscalers
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_machinehealthchecks
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_machines
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_machinesets
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_managedfleetnotificationrecords
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_managedfleetnotifications
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_managednotifications
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_metal3remediations
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_metal3remediationtemplates
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_mustgathers
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_namespaces
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_network-attachment-definitions
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_networkpolicies
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_nodeslicepools
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_objectdeployments
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_objectsetphases
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_objectsets
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_objectslices
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_objecttemplates
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_ocmagents
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_operatorconditions
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_operatorgroups
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_operatorpkis
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_overlappingrangeipreservations
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_packages
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_persistentvolumeclaims
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_poddisruptionbudgets
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_podmonitors
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_podnetworkconnectivitychecks
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_pods
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_podtemplates
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_preprovisioningimages
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_probes
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_profiles
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_projecthelmchartrepositories
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_prometheuses
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_prometheusrules
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_referencegrants
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_replicasets
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_replicationcontrollers
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_resourcequotas
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_rolebindingrestrictions
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_rolebindings
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_roles
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_routemonitors
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_secrets
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_servicemonitors
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_services
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_splunkforwarders
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_statefulsets
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_subjectpermissions
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_subscriptions
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_thanosrulers
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_tuneds
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_upgradeconfigs
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_userdefinednetworks
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_validatingwebhookconfigurations
-- max-mutating-apicalls-latency_byLabelVerb_DELETE_byLabelResource_volumesnapshots
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_apiservers
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_catalogsources
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_clusteroperators
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_clusterpackages
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_clusterrolebindings
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_clusterroles
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_daemonsets
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_events
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_ingresscontrollers
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_ingresses
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_machinehealthchecks
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_machines
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_machinesets
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_namespaces
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_nodes
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_pods
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_rolebindings
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_secrets
-- max-mutating-apicalls-latency_byLabelVerb_PATCH_byLabelResource_serviceaccounts
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_apirequestcounts
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_certificatesigningrequests
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_clusteroperators
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_clusterrolebindings
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_clusterserviceversions
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_configmaps
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_controllerrevisions
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_daemonsets
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_deployments
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_endpoints
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_endpointslices
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_events
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_jobs
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_machines
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_namespaces
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_networkpolicies
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_pods
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_replicasets
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_rolebindings
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_secrets
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_selfsubjectaccessreviews
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_selfsubjectreviews
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_serviceaccounts
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_services
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_subjectaccessreviews
-- max-mutating-apicalls-latency_byLabelVerb_POST_byLabelResource_tokenreviews
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_addonoperators
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_alertmanagers
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_apirequestcounts
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_catalogsources
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_certificatesigningrequests
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clustercatalogs
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusterobjectsets
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusterobjecttemplates
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusteroperators
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusterpackages
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusterrolebindings
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusterroles
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusterserviceversions
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_clusterversions
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_configmaps
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_configs
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_consoleplugins
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_controllerconfigs
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_controlplanemachinesets
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_credentialsrequests
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_cronjobs
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_daemonsets
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_deployments
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_dnses
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_endpoints
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_endpointslices
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_insightsoperators
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_jobs
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_leases
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_machineconfigpools
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_machineconfigs
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_machines
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_machinesets
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_namespaces
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_nodes
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_olmconfigs
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_poddisruptionbudgets
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_podnetworkconnectivitychecks
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_pods
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_prometheuses
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_prometheusrules
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_rangeallocations
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_replicasets
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_secrets
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_securitycontextconstraints
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_servicemonitors
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_services
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_storages
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_subjectpermissions
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_subscriptions
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_thanosrulers
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_tuneds
-- max-mutating-apicalls-latency_byLabelVerb_PUT_byLabelResource_validatingadmissionpolicies
-- max-ro-apicalls-latency_byLabelVerb_GET__value
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_alertmanagers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_apirequestcounts
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_apiservers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_apiservices
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_authentications
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_builds
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_catalogsources
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_certificatesigningrequests
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_cloudcredentials
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_clustercsidrivers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_clusteroperators
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_clusterrolebindings
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_clusterroles
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_clusterserviceversions
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_clusterversions
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_configmaps
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_configs
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_consoleclidownloads
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_consoleplugins
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_consolequickstarts
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_consoles
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_controllerconfigs
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_controllerrevisions
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_credentialsrequests
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_cronjobs
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_csidrivers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_csisnapshotcontrollers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_customresourcedefinitions
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_daemonsets
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_deployments
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_dnses
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_dnsrecords
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_endpoints
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_endpointslices
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_etcds
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_featuregates
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_flowschemas
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_helmchartrepositories
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_images
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_infrastructures
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_ingressclasses
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_ingresscontrollers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_ingresses
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_insightsoperators
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_jobs
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_kubeapiservers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_kubecontrollermanagers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_kubeschedulers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_kubestorageversionmigrators
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_leases
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_machineconfignodes
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_machineconfigpools
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_machineconfigs
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_machinehealthchecks
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_mutatingwebhookconfigurations
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_namespaces
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_networkpolicies
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_networks
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_nodes
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_oauths
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_olmconfigs
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_olms
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_openshiftapiservers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_openshiftcontrollermanagers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_operatorgroups
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_operatorhubs
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_persistentvolumeclaims
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_persistentvolumes
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_poddisruptionbudgets
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_pods
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_priorityclasses
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_prioritylevelconfigurations
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_projects
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_prometheuses
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_prometheusrules
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_proxies
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_replicasets
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_rolebindings
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_roles
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_schedulers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_secrets
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_securitycontextconstraints
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_serviceaccounts
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_servicecas
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_servicemonitors
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_services
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_storageclasses
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_storages
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_storageversionmigrations
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_subjectpermissions
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_subscriptions
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_thanosrulers
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_upgradeconfigs
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_validatingadmissionpolicies
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_validatingadmissionpolicybindings
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_validatingwebhookconfigurations
-- max-ro-apicalls-latency_byLabelVerb_GET_byLabelResource_volumesnapshotclasses
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_addoninstances
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_alertingrules
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_alertmanagerconfigs
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_alertmanagers
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_alertrelabelconfigs
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_baremetalhosts
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_bmceventsubscriptions
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_catalogsources
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_certificatesigningrequests
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_clusteroperators
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_clusterrolebindings
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_clusterroles
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_clusterserviceversions
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_clusterurlmonitors
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_clusterversions
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_configmaps
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_consoleplugins
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_containerruntimeconfigs
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_controllerrevisions
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_controlplanemachinesets
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_credentialsrequests
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_cronjobs
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_csistoragecapacities
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_daemonsets
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_dataimages
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_deployments
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_dnsrecords
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_egressfirewalls
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_egressqoses
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_egressrouters
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_egressservices
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_endpoints
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_endpointslices
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_events
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_firmwareschemas
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_hardwaredata
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_horizontalpodautoscalers
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_hostfirmwarecomponents
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_hostfirmwaresettings
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_hostupdatepolicies
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_ingresscontrollers
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_ingresses
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_installplans
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_ipaddressclaims
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_ipaddresses
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_ipamclaims
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_ippools
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_jobs
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_leases
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_limitranges
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_machineautoscalers
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_machineconfignodes
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_machineconfigpools
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_machineconfigs
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_machinehealthchecks
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_machineosconfigs
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_machines
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_machinesets
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_managedfleetnotificationrecords
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_managedfleetnotifications
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_managednotifications
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_metal3remediations
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_metal3remediationtemplates
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_mustgathers
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_mutatingwebhookconfigurations
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_namespaces
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_network-attachment-definitions
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_networkpolicies
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_nodes
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_nodeslicepools
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_objectdeployments
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_objectsetphases
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_objectsets
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_objectslices
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_objecttemplates
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_ocmagents
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_operatorconditions
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_operatorgroups
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_operatorpkis
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_operators
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_overlappingrangeipreservations
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_packages
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_persistentvolumeclaims
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_poddisruptionbudgets
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_podmonitors
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_podnetworkconnectivitychecks
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_pods
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_podtemplates
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_preprovisioningimages
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_probes
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_profiles
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_projecthelmchartrepositories
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_prometheuses
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_prometheusrules
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_replicasets
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_replicationcontrollers
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_resourcequotas
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_rolebindingrestrictions
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_rolebindings
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_roles
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_routemonitors
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_schedulers
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_secrets
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_serviceaccounts
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_servicemonitors
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_services
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_splunkforwarders
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_statefulsets
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_storageclasses
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_subjectpermissions
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_subscriptions
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_thanosrulers
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_tuneds
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_upgradeconfigs
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_userdefinednetworks
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_validatingwebhookconfigurations
-- max-ro-apicalls-latency_byLabelVerb_LIST_byLabelResource_volumesnapshots
-- memory-cluster-usage-ratio
-- memory-crio
-- memory-etcd
-- memory-infra
-- memory-kube-apiserver
-- memory-kube-controller-manager
-- memory-kubelet
-- memory-masters
-- memory-multus_byLabelContainer_kube-multus
-- memory-multus_byLabelContainer_kube-multus-additional-cni-plugins
-- memory-multus_byLabelContainer_kube-rbac-proxy
-- memory-multus_byLabelContainer_multus-admission-controller
-- memory-openshift-apiserver
-- memory-openshift-controller-manager
-- memory-ovn-control-plane_byLabelContainer_kube-rbac-proxy
-- memory-ovn-control-plane_byLabelContainer_ovnkube-cluster-manager
-- memory-ovnkube-node_byLabelContainer_drop-icmp
-- memory-ovnkube-node_byLabelContainer_kube-rbac-proxy-node
-- memory-ovnkube-node_byLabelContainer_kube-rbac-proxy-ovn-metrics
-- memory-ovnkube-node_byLabelContainer_nbdb
-- memory-ovnkube-node_byLabelContainer_northd
-- memory-ovnkube-node_byLabelContainer_ovn-acl-logging
-- memory-ovnkube-node_byLabelContainer_ovn-controller
-- memory-ovnkube-node_byLabelContainer_ovnkube-controller
-- memory-ovnkube-node_byLabelContainer_sbdb
-- memory-prometheus
-- memory-router
-- memory-sum-workers
-- memory-workers
-- nodeCPUSeconds-Infra_byLabelMode_idle
-- nodeCPUSeconds-Infra_byLabelMode_iowait
-- nodeCPUSeconds-Infra_byLabelMode_irq
-- nodeCPUSeconds-Infra_byLabelMode_nice
-- nodeCPUSeconds-Infra_byLabelMode_softirq
-- nodeCPUSeconds-Infra_byLabelMode_steal
-- nodeCPUSeconds-Infra_byLabelMode_system
-- nodeCPUSeconds-Infra_byLabelMode_user
-- nodeCPUSeconds-Masters_byLabelMode_idle
-- nodeCPUSeconds-Masters_byLabelMode_iowait
-- nodeCPUSeconds-Masters_byLabelMode_irq
-- nodeCPUSeconds-Masters_byLabelMode_nice
-- nodeCPUSeconds-Masters_byLabelMode_softirq
-- nodeCPUSeconds-Masters_byLabelMode_steal
-- nodeCPUSeconds-Masters_byLabelMode_system
-- nodeCPUSeconds-Masters_byLabelMode_user
-- nodeCPUSeconds-Workers_byLabelMode_idle
-- nodeCPUSeconds-Workers_byLabelMode_iowait
-- nodeCPUSeconds-Workers_byLabelMode_irq
-- nodeCPUSeconds-Workers_byLabelMode_nice
-- nodeCPUSeconds-Workers_byLabelMode_softirq
-- nodeCPUSeconds-Workers_byLabelMode_steal
-- nodeCPUSeconds-Workers_byLabelMode_system
-- nodeCPUSeconds-Workers_byLabelMode_user

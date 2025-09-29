@@ -19,7 +19,7 @@ This project implements multiple regression models to predict various cluster pe
 ## Project Structure
 
 ```
-cluster_performance_ml/
+cluster-performance-ml/
 ├── src/                          # Source code
 │   ├── data_preprocessor.py      # Data preprocessing pipeline
 │   ├── multi_output_model.py     # Multi-output regression models
@@ -44,7 +44,7 @@ cluster_performance_ml/
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd cluster_performance_ml
+cd cluster-performance-ml
 ```
 
 2. Install dependencies:
@@ -147,11 +147,11 @@ After training, find results in:
 ## Example Results
 
 ```
-Model Performance Summary:
-      Model  Overall R²  Overall RMSE  Overall MAE  Explained Variance
- RandomForest      0.85          0.12         0.08               0.86
-     XGBoost      0.83          0.13         0.09               0.84
-     LightGBM      0.81          0.14         0.10               0.82
+       Model  Overall R²  Overall RMSE  Overall MAE  Explained Variance
+RandomForest    0.938880      0.235042     0.113551            0.938970
+     XGBoost    0.934250      0.245289     0.122311            0.934259
+    CatBoost    0.921117      0.268978     0.150960            0.921137
+    LightGBM    0.898202      0.303874     0.157239            0.898221
 ```
 
 ## Advanced Usage
