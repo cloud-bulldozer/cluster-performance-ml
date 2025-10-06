@@ -1,39 +1,5 @@
-LightGBM:
-  avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_mae: 0.15019431847199685
-  avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_mse: 0.022558333301267608
-  avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_r2: -1.1712956313395339e+32
-  avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mae: 0.15233952156305666
-  avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mse: 0.023207329830061
-  avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_r2: -1.2049934577160733e+32
-  cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_mae: 0.017586845192190517
-  cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_mse: 0.00030929712381407476
-  cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_r2: -1.027815989973554e+32
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_mae: 0.038833859814065334
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_mse: 0.0015080686680584783
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_r2: -1.2528544332183742e+32
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_ocm_agent_operator_mae: 0.06811854246339538
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_ocm_agent_operator_mse: 0.004640135827337401
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_ocm_agent_operator_r2: -9.637185071783556e+31
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_mae: 0.15327983587600502
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_mse: 0.02349470808617504
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_r2: -1.2199149898803947e+32
-  max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_mae: 0.1540230666728872
-  max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_mse: 0.023723105067320647
-  max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_r2: -1.2317740391574065e+32
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_ingressclasses_mae: 0.1373964455369953
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_ingressclasses_mse: 0.018877783246200514
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_ingressclasses_r2: -9.801905464534833e+31
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mae: 0.07150410163283498
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mse: 0.005112836550318796
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_r2: -1.0618946063368931e+32
-  max_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_clusterrolebindings_mae: 0.12576177021284085
-  max_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_clusterrolebindings_mse: 0.015816022847067384
-  max_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_clusterrolebindings_r2: -8.212148574334304e+31
-  overall_explained_variance: 0.11533742331288344
-  overall_mae: 0.4318086959530726
-  overall_mse: 0.4219805417970507
-  overall_r2: -2.8378027400183394e+30
-  overall_rmse: !!python/object/apply:numpy._core.multiarray.scalar
+CatBoost:
+  cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
   - &id001 !!python/object/apply:numpy.dtype
     args:
     - f8
@@ -49,82 +15,371 @@ LightGBM:
     - -1
     - 0
   - !!binary |
-    abU0jobJ5D8=
+    ieFFSZLSwz8=
+  cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    TmMLEb+utD8=
+  cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    sdEFwEcv7T8=
+  cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    rCMq9scbyD8=
+  cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    UWNZHrwtuD8=
+  cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    TXQ/3y7e7D8=
+  cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    2T8lrVCvzT8=
+  cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    xqFdbwqTvT8=
+  cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    ugy51AlP7D8=
+  max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    RKtQJh62vz8=
+  max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    Trk4Xq/Wqz8=
+  max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    sOEesR7J7T8=
+  max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    w49cRccswz8=
+  max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    IUTedvQTsD8=
+  max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    rC66oa227T8=
+  max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    3l5AgqwprT8=
+  max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    /EmtSCbImj8=
+  max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    jUkEo2z+7j8=
+  overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    8whWnPN57T8=
+  overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    BwtHZqdSwz8=
+  overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    nWTR43mFsj8=
+  overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    xZykkcl57T8=
+  overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    ItWWp+820T8=
+LightGBM:
+  cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    81JIfDxuxT8=
+  cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    Y2XNRjcduj8=
+  cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    MqwAhgJy7D8=
+  cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    0rPUIpWrxz8=
+  cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    xCuXAF1Quj8=
+  cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    ev+Bel+X7D8=
+  cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    b23GdDpxzD8=
+  cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    b/EbIHtevz8=
+  cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    RPT2x7EV7D8=
+  max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    UUgxt3ZEwD8=
+  max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    CJ2eby7Yrz8=
+  max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    w/OQa4x37T8=
+  max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    psYnH1nNxD8=
+  max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    JVC1w3kvuD8=
+  max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    uGEjyIWP7D8=
+  max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    xTgWa1RLtD8=
+  max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    K8oNTrXtsT8=
+  max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    gsdBAElO7T8=
+  overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    OaGvojq+7D8=
+  overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    l5r2r2sgxD8=
+  overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    59EtSI6jtz8=
+  overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    0/RnfxK+7D8=
+  overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    7eCT+Kty0z8=
 RandomForest:
-  avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_mae: 0.11840475580414513
-  avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_mse: 0.03978353270867596
-  avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_r2: -5.164197797616894e+31
-  avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mae: 0.008092578180785834
-  avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mse: 0.0004584287512849086
-  avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_r2: -2.3802981651586748e+30
-  avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_networkpolicies_mae: 0.005890150893739553
-  avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_networkpolicies_mse: 0.000242857142857146
-  avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_networkpolicies_r2: -3.902563821771884e+56
-  avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_rolebindingrestrictions_mae: 0.005890150893739518
-  avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_rolebindingrestrictions_mse: 0.00024285714285714316
-  avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_rolebindingrestrictions_r2: -1.5610255287087353e+57
-  avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_statefulsets_mae: 0.0058901508937395635
-  avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_statefulsets_mse: 0.00024285714285714684
-  avg_ro_apicalls_latency_byLabelVerb_LIST_byLabelResource_statefulsets_r2: -6.244102114835036e+57
-  cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_managed_node_metadata_operator_mae: 0.006176462623663726
-  cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_managed_node_metadata_operator_mse: 0.00026704083379060304
-  cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_managed_node_metadata_operator_r2: -8.873953807305403e+31
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_managednotifications_mae: 0.008221959128116688
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_managednotifications_mse: 0.00047320428333093566
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_managednotifications_r2: -6.1425427844611044e+29
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_packages_mae: 0.0037554007499783987
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_packages_mse: 9.872124355056386e-05
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_packages_r2: -5.1259000275824436e+29
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_upgradeconfigs_mae: 0.0031276661076738176
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_upgradeconfigs_mse: 6.847606696763833e-05
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_upgradeconfigs_r2: -3.55548067400889e+29
-  max_mutating_apicalls_latency_byLabelVerb_PATCH_byLabelResource_daemonsets_mae: 0.005890150893739497
-  max_mutating_apicalls_latency_byLabelVerb_PATCH_byLabelResource_daemonsets_mse: 0.00024285714285714137
-  max_mutating_apicalls_latency_byLabelVerb_PATCH_byLabelResource_daemonsets_r2: -2.4976408459339581e+58
-  overall_explained_variance: -3.488707360391994e+55
-  overall_mae: 0.27443080863925473
-  overall_mse: 0.3442139588499833
-  overall_r2: -4.070158587123993e+55
-  overall_rmse: !!python/object/apply:numpy._core.multiarray.scalar
+  cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
   - *id001
   - !!binary |
-    mij31jnG4j8=
+    S08pwDzSvj8=
+  cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    cPQs1jO+rj8=
+  cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    u7zc2Fro7T8=
+  cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    91E99s0Awj8=
+  cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    PI7ibVfEsD8=
+  cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    V4s/lPjT7T8=
+  cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    fYCUlOQ5xD8=
+  cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    TSX1L1T2sD8=
+  cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    vBQ4wAXi7T8=
+  max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    kn/5ztyAtz8=
+  max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    azkdqbPBpT8=
+  max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    dGJUrfdE7j8=
+  max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    8vSV/OSFvz8=
+  max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    IC9Qt4eUrD8=
+  max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    XaIf8sP37T8=
+  max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    8GRxGTw3qD8=
+  max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    Yxsk9EUspT8=
+  max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    2xudf7xo7j8=
+  overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    Qy5mAQoM7j8=
+  overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    3NlY8qoRvT8=
+  overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    6E8SEQJJrD8=
+  overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    6ZS7jE0L7j8=
+  overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    ASzqBNcVzj8=
 XGBoost:
-  avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_mae: 0.14873414261933565
-  avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_mse: 0.0721236752544887
-  avg_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_serviceaccounts_r2: -9.362188311246695e+31
-  avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_mae: 6.323049227360822e-06
-  avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_mse: 3.998095153162829e-11
-  avg_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_credentialsrequests_r2: -2.0759296903890677e+23
-  avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mae: 6.2995093875473085e-06
-  avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mse: 3.968381852379666e-11
-  avg_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_r2: -2.060501662557756e+23
-  cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_mae: 7.728372336084088e-07
-  cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_mse: 5.972773896514982e-13
-  cgroupCPUSeconds_namespaces_byLabelNamespace_openshift_addon_operator_r2: -1.9847945689352682e+23
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_mae: 1.748805875993742e-06
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_mse: 3.0583219919102392e-12
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_managed_upgrade_operator_r2: -2.540754507357362e+23
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_package_operator_mae: 3.0434591533456956e-05
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_package_operator_mse: 9.262643618083698e-10
-  cgroupMemoryRSS_namespaces_byLabelNamespace_openshift_package_operator_r2: -1.2023598839975914e+24
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_mae: 6.896375019688206e-06
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_mse: 4.75599884121795e-11
-  max_mutating_apicalls_latency_byLabelVerb_DELETE_byLabelResource_objecttemplates_r2: -2.4694557842451242e+23
-  max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_mae: 6.625731659368195e-06
-  max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_mse: 4.3900320021954e-11
-  max_mutating_apicalls_latency_byLabelVerb_PUT_byLabelResource_ingresscontrollers_r2: -2.2794349373866536e+23
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_dnsrecords_mae: 5.228771854925984e-05
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_dnsrecords_mse: 2.734005511086612e-09
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_dnsrecords_r2: -8.872355141519951e+23
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mae: 3.1429649739039833e-06
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_mse: 9.878228827187264e-12
-  max_ro_apicalls_latency_byLabelVerb_GET_byLabelResource_upgradeconfigs_r2: -2.0516278602917043e+23
-  overall_explained_variance: -1.1415155025865217e+29
-  overall_mae: 0.29670241475105286
-  overall_mse: 0.434123158454895
-  overall_r2: -398547517440.0
-  overall_rmse: !!python/object/apply:numpy._core.multiarray.scalar
+  cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
   - *id001
   - !!binary |
-    dcNf/osV5T8=
+    0P/HuXCVvz8=
+  cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    xRB+AwDssD8=
+  cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    KFZYP1Sy7T8=
+  cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    5DTgGF82wz8=
+  cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    FhRDQ9ydsj8=
+  cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    DwyeqKGW7T8=
+  cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    MeV/4NqZyT8=
+  cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    EGEvrJgIuT8=
+  cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    gWPMSyDg7D8=
+  max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    +bGEtyapuD8=
+  max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    JYm33v6/qD8=
+  max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    /WHnkQMI7j8=
+  max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    6YzIJfCivj8=
+  max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    Nfezo95Cqz8=
+  max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    gWKfQMYP7j8=
+  max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    Febs4E25pj8=
+  max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    VAPNAbdalz8=
+  max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    0/KuaGMf7z8=
+  overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    jPa5Y3Pl7T8=
+  overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    UKYMv8VPvz8=
+  overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    +ywzfDDOrj8=
+  overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    gb9+kmDl7T8=
+  overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
+  - *id001
+  - !!binary |
+    EJuU8qNlzz8=

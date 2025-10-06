@@ -12,6 +12,7 @@ from sklearn.metrics import (mean_squared_error, mean_absolute_error,
                            r2_score, explained_variance_score)
 import xgboost as xgb
 import lightgbm as lgb
+from catboost import CatBoostRegressor
 import joblib
 import yaml
 import os
@@ -25,7 +26,7 @@ warnings.filterwarnings('ignore')
 class MultiOutputClusterModel:
     """
     Multi-output regression model for cluster performance prediction.
-    Supports various algorithms including Random Forest, XGBoost, and LightGBM.
+    Supports various algorithms including Random Forest, XGBoost, LightGBM, and CatBoost.
     """
     
     def __init__(self, config_path: str = "configs/config.yaml"):
@@ -60,6 +61,8 @@ class MultiOutputClusterModel:
             return xgb.XGBRegressor(**params)
         elif model_type == 'LGBMRegressor':
             return lgb.LGBMRegressor(**params)
+        elif model_type == 'CatBoostRegressor':
+            return CatBoostRegressor(**params)
         else:
             raise ValueError(f"Unsupported model type: {model_type}")
     
