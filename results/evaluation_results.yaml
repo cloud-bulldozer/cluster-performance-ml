@@ -1,385 +1,96 @@
 CatBoost:
-  cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - &id001 !!python/object/apply:numpy.dtype
-    args:
-    - f8
-    - false
-    - true
-    state: !!python/tuple
-    - 3
-    - <
-    - null
-    - null
-    - null
-    - -1
-    - -1
-    - 0
-  - !!binary |
-    ieFFSZLSwz8=
-  cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    TmMLEb+utD8=
-  cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    sdEFwEcv7T8=
-  cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    rCMq9scbyD8=
-  cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    UWNZHrwtuD8=
-  cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    TXQ/3y7e7D8=
-  cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    2T8lrVCvzT8=
-  cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    xqFdbwqTvT8=
-  cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    ugy51AlP7D8=
-  max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    RKtQJh62vz8=
-  max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    Trk4Xq/Wqz8=
-  max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    sOEesR7J7T8=
-  max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    w49cRccswz8=
-  max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    IUTedvQTsD8=
-  max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    rC66oa227T8=
-  max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    3l5AgqwprT8=
-  max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    /EmtSCbImj8=
-  max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    jUkEo2z+7j8=
-  overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    8whWnPN57T8=
-  overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    BwtHZqdSwz8=
-  overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    nWTR43mFsj8=
-  overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    xZykkcl57T8=
-  overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    ItWWp+820T8=
+  cpu_kube_apiserver_mae: 0.15156012033314456
+  cpu_kube_apiserver_mse: 0.050668293462777465
+  cpu_kube_apiserver_r2: 0.9408931560559002
+  cpu_masters_mae: 0.21086438718532818
+  cpu_masters_mse: 0.09173395982794215
+  cpu_masters_r2: 0.8914564752926731
+  cpu_workers_mae: 0.3681656844488081
+  cpu_workers_mse: 0.3215615056147649
+  cpu_workers_r2: 0.4142380951516921
+  max_memory_sum_kube_apiserver_mae: 0.11941621128815834
+  max_memory_sum_kube_apiserver_mse: 0.02759258269256324
+  max_memory_sum_kube_apiserver_r2: 0.9621556579774527
+  max_memory_sum_masters_mae: 0.16743397290410303
+  max_memory_sum_masters_mse: 0.05631128395427719
+  max_memory_sum_masters_r2: 0.9223061123150728
+  max_memory_sum_workers_mae: 0.031120601190154976
+  max_memory_sum_workers_mse: 0.0038601134044856625
+  max_memory_sum_workers_r2: 0.9949674358064616
+  overall_explained_variance: 0.8606717658849576
+  overall_mae: 0.17476016289161622
+  overall_mse: 0.09195462315946844
+  overall_r2: 0.8543361554332088
+  overall_rmse: 0.3032402070297876
 LightGBM:
-  cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    81JIfDxuxT8=
-  cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    Y2XNRjcduj8=
-  cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    MqwAhgJy7D8=
-  cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    0rPUIpWrxz8=
-  cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    xCuXAF1Quj8=
-  cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    ev+Bel+X7D8=
-  cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    b23GdDpxzD8=
-  cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    b/EbIHtevz8=
-  cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    RPT2x7EV7D8=
-  max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    UUgxt3ZEwD8=
-  max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    CJ2eby7Yrz8=
-  max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    w/OQa4x37T8=
-  max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    psYnH1nNxD8=
-  max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    JVC1w3kvuD8=
-  max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    uGEjyIWP7D8=
-  max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    xTgWa1RLtD8=
-  max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    K8oNTrXtsT8=
-  max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    gsdBAElO7T8=
-  overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    OaGvojq+7D8=
-  overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    l5r2r2sgxD8=
-  overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    59EtSI6jtz8=
-  overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    0/RnfxK+7D8=
-  overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    7eCT+Kty0z8=
+  cpu_kube_apiserver_mae: 0.19492409651085113
+  cpu_kube_apiserver_mse: 0.09998155720917144
+  cpu_kube_apiserver_r2: 0.8833670152401727
+  cpu_masters_mae: 0.24841807408142402
+  cpu_masters_mse: 0.13188396446083706
+  cpu_masters_r2: 0.843949281358781
+  cpu_workers_mae: 0.41844595369821785
+  cpu_workers_mse: 0.3829864983104923
+  cpu_workers_r2: 0.30234528429438834
+  max_memory_sum_kube_apiserver_mae: 0.15970016501142875
+  max_memory_sum_kube_apiserver_mse: 0.06544551061472323
+  max_memory_sum_kube_apiserver_r2: 0.9102388379101836
+  max_memory_sum_masters_mae: 0.2211895209370097
+  max_memory_sum_masters_mse: 0.10139377382540694
+  max_memory_sum_masters_r2: 0.860104832950737
+  max_memory_sum_workers_mae: 0.0764008252785514
+  max_memory_sum_workers_mse: 0.03942667330009304
+  max_memory_sum_workers_r2: 0.9485980738053421
+  overall_explained_variance: 0.8032069910702843
+  overall_mae: 0.21984643925291378
+  overall_mse: 0.13685299628678735
+  overall_r2: 0.7914338875932675
+  overall_rmse: 0.36993647601552804
 RandomForest:
-  cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    S08pwDzSvj8=
-  cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    cPQs1jO+rj8=
-  cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    u7zc2Fro7T8=
-  cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    91E99s0Awj8=
-  cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    PI7ibVfEsD8=
-  cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    V4s/lPjT7T8=
-  cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    fYCUlOQ5xD8=
-  cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    TSX1L1T2sD8=
-  cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    vBQ4wAXi7T8=
-  max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    kn/5ztyAtz8=
-  max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    azkdqbPBpT8=
-  max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    dGJUrfdE7j8=
-  max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    8vSV/OSFvz8=
-  max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    IC9Qt4eUrD8=
-  max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    XaIf8sP37T8=
-  max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    8GRxGTw3qD8=
-  max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    Yxsk9EUspT8=
-  max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    2xudf7xo7j8=
-  overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    Qy5mAQoM7j8=
-  overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    3NlY8qoRvT8=
-  overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    6E8SEQJJrD8=
-  overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    6ZS7jE0L7j8=
-  overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    ASzqBNcVzj8=
+  cpu_kube_apiserver_mae: 0.13616453532330114
+  cpu_kube_apiserver_mse: 0.054963110952082145
+  cpu_kube_apiserver_r2: 0.935883058226274
+  cpu_masters_mae: 0.19691861032629665
+  cpu_masters_mse: 0.09291633417323918
+  cpu_masters_r2: 0.890057439655241
+  cpu_workers_mae: 0.34935236093654215
+  cpu_workers_mse: 0.3169678701643839
+  cpu_workers_r2: 0.42260593957526393
+  max_memory_sum_kube_apiserver_mae: 0.1157611019928738
+  max_memory_sum_kube_apiserver_mse: 0.03304080429973289
+  max_memory_sum_kube_apiserver_r2: 0.9546832019114996
+  max_memory_sum_masters_mae: 0.16054477665890415
+  max_memory_sum_masters_mse: 0.058134511628544674
+  max_memory_sum_masters_r2: 0.9197905659413902
+  max_memory_sum_workers_mae: 0.032182033418681276
+  max_memory_sum_workers_mse: 0.008579302837105856
+  max_memory_sum_workers_r2: 0.9888148642956013
+  overall_explained_variance: 0.8589309538554116
+  overall_mae: 0.1651539031094332
+  overall_mse: 0.09410032234251477
+  overall_r2: 0.8519725116008784
+  overall_rmse: 0.30675775840639263
 XGBoost:
-  cpu_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    0P/HuXCVvz8=
-  cpu_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    xRB+AwDssD8=
-  cpu_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    KFZYP1Sy7T8=
-  cpu_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    5DTgGF82wz8=
-  cpu_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    FhRDQ9ydsj8=
-  cpu_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    DwyeqKGW7T8=
-  cpu_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    MeV/4NqZyT8=
-  cpu_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    EGEvrJgIuT8=
-  cpu_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    gWPMSyDg7D8=
-  max_memory_sum_kube_apiserver_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    +bGEtyapuD8=
-  max_memory_sum_kube_apiserver_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    JYm33v6/qD8=
-  max_memory_sum_kube_apiserver_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    /WHnkQMI7j8=
-  max_memory_sum_masters_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    6YzIJfCivj8=
-  max_memory_sum_masters_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    Nfezo95Cqz8=
-  max_memory_sum_masters_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    gWKfQMYP7j8=
-  max_memory_sum_workers_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    Febs4E25pj8=
-  max_memory_sum_workers_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    VAPNAbdalz8=
-  max_memory_sum_workers_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    0/KuaGMf7z8=
-  overall_explained_variance: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    jPa5Y3Pl7T8=
-  overall_mae: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    UKYMv8VPvz8=
-  overall_mse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    +ywzfDDOrj8=
-  overall_r2: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    gb9+kmDl7T8=
-  overall_rmse: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    EJuU8qNlzz8=
+  cpu_kube_apiserver_mae: 0.13059651373356046
+  cpu_kube_apiserver_mse: 0.05719115737713105
+  cpu_kube_apiserver_r2: 0.9332839418293044
+  cpu_masters_mae: 0.19450775140138252
+  cpu_masters_mse: 0.09632219414820777
+  cpu_masters_r2: 0.8860274812076161
+  cpu_workers_mae: 0.34380496003985733
+  cpu_workers_mse: 0.3351777909118984
+  cpu_workers_r2: 0.3894344383913516
+  max_memory_sum_kube_apiserver_mae: 0.11216994688052552
+  max_memory_sum_kube_apiserver_mse: 0.037405422919168846
+  max_memory_sum_kube_apiserver_r2: 0.948696951125471
+  max_memory_sum_masters_mae: 0.16084491644608537
+  max_memory_sum_masters_mse: 0.06278806063712192
+  max_memory_sum_masters_r2: 0.9133699644452092
+  max_memory_sum_workers_mae: 0.03585879591641468
+  max_memory_sum_workers_mse: 0.01569870626316144
+  max_memory_sum_workers_r2: 0.9795330502640015
+  overall_explained_variance: 0.8471627831459045
+  overall_mae: 0.16296382248401642
+  overall_mse: 0.10076388716697693
+  overall_r2: 0.8417243957519531
+  overall_rmse: 0.31743327986677283

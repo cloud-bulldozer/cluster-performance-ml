@@ -239,15 +239,29 @@ class MultiOutputClusterModel:
             self.logger.info(f"Model {model_name} saved to {model_path}")
         
         # Save model metadata
+        # Convert numpy types to Python native types for safe YAML serialization
+        def convert_numpy_types(obj):
+            """Recursively convert numpy types to Python native types."""
+            if isinstance(obj, dict):
+                return {key: convert_numpy_types(value) for key, value in obj.items()}
+            elif isinstance(obj, list):
+                return [convert_numpy_types(item) for item in obj]
+            elif isinstance(obj, (np.integer, np.floating)):
+                return float(obj)
+            elif isinstance(obj, np.ndarray):
+                return obj.tolist()
+            else:
+                return obj
+        
         metadata = {
             'feature_columns': self.feature_columns,
             'target_columns': self.target_columns,
-            'model_scores': self.model_scores
+            'model_scores': convert_numpy_types(self.model_scores)
         }
         
         metadata_path = os.path.join(output_dir, "model_metadata.yaml")
         with open(metadata_path, 'w') as f:
-            yaml.dump(metadata, f)
+            yaml.safe_dump(metadata, f)
         
         self.logger.info(f"Model metadata saved to {metadata_path}")
     
