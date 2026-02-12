@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.joblib
 
 # C extensions
 *.so
@@ -167,3 +168,4 @@ cython_debug/
 
 *.csv
 .vscode/
+.venv/

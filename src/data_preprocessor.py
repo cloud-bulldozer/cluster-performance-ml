@@ -281,3 +281,56 @@ class ClusterDataPreprocessor:
             'feature_columns': self.feature_columns,
             'target_columns': self.target_columns
         }
+    
+    def save_preprocessor_state(self, output_dir: str = "data/processed/"):
+        """Save preprocessor state (encoders, scalers, column names) to disk."""
+        import joblib
+        
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Save label encoders
+        encoders_path = os.path.join(output_dir, "label_encoders.joblib")
+        joblib.dump(self.label_encoders, encoders_path)
+        self.logger.info(f"Label encoders saved to {encoders_path}")
+        
+        # Save scalers
+        scalers_path = os.path.join(output_dir, "scalers.joblib")
+        joblib.dump(self.scalers, scalers_path)
+        self.logger.info(f"Scalers saved to {scalers_path}")
+        
+        # Save column information
+        columns_metadata = {
+            'feature_columns': self.feature_columns,
+            'target_columns': self.target_columns
+        }
+        columns_path = os.path.join(output_dir, "columns_metadata.yaml")
+        with open(columns_path, 'w') as f:
+            yaml.safe_dump(columns_metadata, f)
+        self.logger.info(f"Column metadata saved to {columns_path}")
+    
+    def load_preprocessor_state(self, input_dir: str = "data/processed/"):
+        """Load preprocessor state (encoders, scalers, column names) from disk."""
+        import joblib
+        
+        try:
+            # Load label encoders
+            encoders_path = os.path.join(input_dir, "label_encoders.joblib")
+            self.label_encoders = joblib.load(encoders_path)
+            self.logger.info(f"Label encoders loaded from {encoders_path}")
+            
+            # Load scalers
+            scalers_path = os.path.join(input_dir, "scalers.joblib")
+            self.scalers = joblib.load(scalers_path)
+            self.logger.info(f"Scalers loaded from {scalers_path}")
+            
+            # Load column information
+            columns_path = os.path.join(input_dir, "columns_metadata.yaml")
+            with open(columns_path, 'r') as f:
+                columns_metadata = yaml.safe_load(f)
+            self.feature_columns = columns_metadata.get('feature_columns', [])
+            self.target_columns = columns_metadata.get('target_columns', [])
+            self.logger.info(f"Column metadata loaded from {columns_path}")
+            
+        except FileNotFoundError as e:
+            self.logger.error(f"Preprocessor state file not found: {str(e)}")
+            raise ValueError("Preprocessor state not found. Please train the model first.")

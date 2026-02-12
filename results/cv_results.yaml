@@ -1,113 +1,28 @@
 CatBoost:
-  neg_mean_absolute_error_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - &id001 !!python/object/apply:numpy.dtype
-    args:
-    - f8
-    - false
-    - true
-    state: !!python/tuple
-    - 3
-    - <
-    - null
-    - null
-    - null
-    - -1
-    - -1
-    - 0
-  - !!binary |
-    benL2GvZxL8=
-  neg_mean_absolute_error_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    8Fm9rS7EgD8=
-  neg_mean_squared_error_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    68XNzFgwt78=
-  neg_mean_squared_error_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    K1PbHnatmz8=
-  r2_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    gvRJr4Is7T8=
-  r2_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    XtyZnInilD8=
+  neg_mean_absolute_error_mean: -0.20410571778096429
+  neg_mean_absolute_error_std: 0.026056209703218154
+  neg_mean_squared_error_mean: -0.1556432920235919
+  neg_mean_squared_error_std: 0.05804413665663971
+  r2_mean: 0.8456703292114106
+  r2_std: 0.0557553030174305
 LightGBM:
-  neg_mean_absolute_error_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    soPH/ZJoxr8=
-  neg_mean_absolute_error_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    CTGSH1hAhj8=
-  neg_mean_squared_error_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    QvMi/XduwL8=
-  neg_mean_squared_error_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    Fe9URS9EnT8=
-  r2_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    QvULHcD26z8=
-  r2_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    kyUVpaMrmT8=
+  neg_mean_absolute_error_mean: -0.24569566832740897
+  neg_mean_absolute_error_std: 0.022408684890447624
+  neg_mean_squared_error_mean: -0.23814145300999576
+  neg_mean_squared_error_std: 0.07023359872521452
+  r2_mean: 0.7779299143953301
+  r2_std: 0.04421178126618702
 RandomForest:
-  neg_mean_absolute_error_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    yHthxdsiwL8=
-  neg_mean_absolute_error_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    RzqBzM6+dz8=
-  neg_mean_squared_error_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    Bhr01xYWtb8=
-  neg_mean_squared_error_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    xsCW/tBEmz8=
-  r2_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    KMBfr7Vm7T8=
-  r2_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    TjalYqTilj8=
+  neg_mean_absolute_error_mean: -0.20580649827822328
+  neg_mean_absolute_error_std: 0.028208442675348246
+  neg_mean_squared_error_mean: -0.18363868395630553
+  neg_mean_squared_error_std: 0.07340322399127902
+  r2_mean: 0.8216498873102838
+  r2_std: 0.06147102990447209
 XGBoost:
-  neg_mean_absolute_error_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    2iU4sVihwL8=
-  neg_mean_absolute_error_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    Btlrf/BbgD8=
-  neg_mean_squared_error_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    a2JdIVBws78=
-  neg_mean_squared_error_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    ayI+Z8i8nT8=
-  r2_mean: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    k6xRyr+j7T8=
-  r2_std: !!python/object/apply:numpy.core.multiarray.scalar
-  - *id001
-  - !!binary |
-    9rlQTS3Tlj8=
+  neg_mean_absolute_error_mean: -0.191023987531662
+  neg_mean_absolute_error_std: 0.02333773236227357
+  neg_mean_squared_error_mean: -0.18800610601902007
+  neg_mean_squared_error_std: 0.06305874594342203
+  r2_mean: 0.8172307133674621
+  r2_std: 0.06579700822401481

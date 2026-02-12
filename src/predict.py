@@ -34,6 +34,10 @@ def main():
         preprocessor = ClusterDataPreprocessor()
         model = MultiOutputClusterModel()
         
+        # Load preprocessor state (encoders, scalers, column info)
+        logger.info("Loading preprocessor state...")
+        preprocessor.load_preprocessor_state()
+        
         # Load trained models
         logger.info("Loading trained models...")
         model.load_models()
